@@ -71,4 +71,5 @@ The confidence with the different instant messaging apps have been going down an
 **Given** a chat id of user **when** he joins to the chat **then** will appear a message inside the chatroom that says the new user is joined
 
 
-
+## _Class Diagram_
+[![N|Solid](/img/chat1.jpeg)](/img/classDiagram.jpeg)
