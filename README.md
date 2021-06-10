@@ -72,4 +72,4 @@ The confidence with the different instant messaging apps have been going down an
 
 
 ## _Class Diagram_
-[![N|Solid](/img/chat1.jpeg)](/img/classDiagram.jpeg)
+[![N|Solid](/img/classDiagram.jpeg)](/img/classDiagram.jpeg)
