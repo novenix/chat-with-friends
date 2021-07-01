@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+          crossorigin="anonymous" />
+
+    <link href="../static/css/style.css" th:href="@{/css/styles.css}"
+          rel="stylesheet" />
+    <title>Chat</title>
+</head>
+<body>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<!-- Load babel to translate JSX to js. -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!--<script src="chatingjsx.jsx" th:src="@{/chatingjsx.jsx}" type="text/babel"></script>-->
+<!--<div id="root"></div>-->
+
+<div class="">
+    <header class="">
+        <h1>
+
+        </h1>
+        <a th:href="@{index}" class="btn">salir de chat</a>
+    </header>
+    <main class="">
+        <div class="">
+            <h4>
+                Chat:
+            </h4>
+            <h3 th:text="${room}" id="room-name"></h3>
+            <div hidden="true" id="usernick" th:text="${usernick}"></div>
+            <h4>
+                <i class=""></i> Usuarios en sala
+            </h4>
+            <ul id="users">
+            </ul>
+        </div>
+        <div class="get-chat-messages">
+        </div>
+    </main>
+    <div class="">
+        <form id="chat-form">
+            <input id="msg" type="text" placeholder="Enter Message" required
+                   autocomplete="off" />
+            <button id="send" class="btn">
+                 Send
+            </button>
+        </form>
+    </div>
+</div>
+<script th:src="@{/chating.js}"></script>
+<!--  <script src="js/main.js"></script> -->
+
+<!--<script th:src="@{/chating.js}"></script>-->
+<!--  <script src="js/main.js"></script> -->
+</body>
+</html>
