@@ -20,36 +20,45 @@
 <!--<script src="chatingjsx.jsx" th:src="@{/chatingjsx.jsx}" type="text/babel"></script>-->
 <!--<div id="root"></div>-->
 
-<div class="">
-    <header class="">
+<div class="chat-contenedor">
+    <div class="navbar-left">
+        <h4>
+            Chat:
+        </h4>
+        <h3 th:text="${room}" id="room-name" style="text-align: center;
+    font-family: cursive;
+    color: #ca7676;"></h3>
+        <div hidden="true" id="usernick" th:text="${usernick}"></div>
+        <h4>
+            <i class=""></i> Usuarios en sala
+        </h4>
+        <ul id="users">
+        </ul>
+    </div>
+
+    <header class="chat-header">
         <h1>
 
         </h1>
         <a th:href="@{index}" class="btn">salir de chat</a>
     </header>
-    <main class="">
-        <div class="">
-            <h4>
-                Chat:
-            </h4>
-            <h3 th:text="${room}" id="room-name"></h3>
-            <div hidden="true" id="usernick" th:text="${usernick}"></div>
-            <h4>
-                <i class=""></i> Usuarios en sala
-            </h4>
-            <ul id="users">
-            </ul>
-        </div>
+    <main class="main-chat main-chat-image">
+
         <div class="get-chat-messages">
         </div>
-    </main>
+        </main>
     <div class="">
         <form id="chat-form">
             <input id="msg" type="text" placeholder="Enter Message" required
                    autocomplete="off" />
-            <button id="send" class="btn">
+            <button  class="btn">
                  Send
             </button>
+            <div class="btn-send" id="send">
+                <svg viewBox="0 0 74.433 60.908" width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#fff" d="M 0 0 L 74.22 26.562 L 0.246 60.712 L 7.608 34.535 L 27.831 28.259 L 6.91 25.469 L 0 0 Z"></path>
+                </svg>
+            </div>
         </form>
     </div>
 </div>
